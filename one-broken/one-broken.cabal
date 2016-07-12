@@ -1,0 +1,20 @@
+name:                one-broken
+version:             0.1.0.0
+synopsis:            Trivial project to show an issue with `cabal repl`
+description:         This project contains three modules, A, B and C. Module A is deliberately
+                     broken (as often happens during development) but because its broken,
+                     `cabal repl B.hs` fails to load B.hs.
+license:             MIT
+license-file:        LICENSE
+author:              Erik de Castro Lopo
+maintainer:          erikd@mega-nerd.com
+copyright:           (c) 2016 Erik de Castro Lopo
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     A, B, C
+
+  build-depends:       base
+
+  default-language:    Haskell2010
